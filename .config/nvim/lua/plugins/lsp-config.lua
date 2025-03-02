@@ -32,7 +32,7 @@ return {
 
 				map("<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>", "Document Symbols")
 
-				map("<leader>ws", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", "Workspace Symbols")
+				map("<leader>cw", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", "Workspace Symbols")
 
 				map("<leader>cr", vim.lsp.buf.rename, "Rename")
 
@@ -101,31 +101,31 @@ return {
 
 		local servers = {
 			clangd = {},
-			gopls = {
-				settings = {
-					gopls = {
-						analyses = {
-							unusedparams = true,
-						},
-						usePlaceholders = true,
-						completeUnimported = true,
-						staticcheck = true,
-						gofumpt = true,
-						hints = {
-							compositeLiteralFields = true,
-							constantValues = true,
-							functionTypeParameters = true,
-							parameterNames = true,
-						},
-					},
-				},
-			},
-			verible = {
-				root_dir = function()
-					return vim.uv.cwd()
-				end,
-			},
-			pyright = {},
+			-- gopls = {
+			-- 	settings = {
+			-- 		gopls = {
+			-- 			analyses = {
+			-- 				unusedparams = true,
+			-- 			},
+			-- 			usePlaceholders = true,
+			-- 			completeUnimported = true,
+			-- 			staticcheck = true,
+			-- 			gofumpt = true,
+			-- 			hints = {
+			-- 				compositeLiteralFields = true,
+			-- 				constantValues = true,
+			-- 				functionTypeParameters = true,
+			-- 				parameterNames = true,
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
+			-- verible = {
+			-- 	root_dir = function()
+			-- 		return vim.uv.cwd()
+			-- 	end,
+			-- },
+			-- pyright = {},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
@@ -133,7 +133,7 @@ return {
 			--    https://github.com/pmizio/typescript-tools.nvim
 			--
 			-- But for many setups, the LSP (`ts_ls`) will work just fine
-			ts_ls = {},
+			-- ts_ls = {},
 			--
 
 			lua_ls = {
@@ -155,10 +155,11 @@ return {
 		local ensure_installed = vim.tbl_keys(servers)
 		vim.list_extend(ensure_installed, {
 			"stylua",
-			"prettier",
+			-- "prettier",
 			-- "eslint_d",
-			"markdownlint",
-			"black",
+			-- "markdownlint",
+			-- "black",
+			"clang-format",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

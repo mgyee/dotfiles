@@ -47,7 +47,7 @@ return {
 		map("n", "<leader>fd", builtin.diagnostics, { desc = "Find Diagnostic" })
 		-- map("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 		map("n", "<leader>fr", builtin.oldfiles, { desc = "Find Recent File" })
-		map("n", "<leadr>fb", builtin.buffers, { desc = "Find Buffer" })
+		map("n", "<leader>fb", builtin.buffers, { desc = "Find Buffer" })
 
 		-- Slightly advanced example of overriding default behavior and theme
 		map("n", "<leader>/", function()

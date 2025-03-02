@@ -7,6 +7,7 @@ return {
 		},
 		spec = {
 			{ "<leader>c", group = "code", mode = { "n", "x" } },
+			{ "<leader>b", group = "buffer" },
 			-- { "<leader>d", group = "[D]ocument" },
 			-- { "<leader>r", group = "[R]ename" },
 			{ "<leader>f", group = "find" },

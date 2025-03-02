@@ -30,6 +30,7 @@ return {
 			javascript = { "prettier" },
 			go = { "gofmt", "goimports" },
 			verilog = { "verible" },
+			c = { "clang-format" },
 		},
 	},
 }
