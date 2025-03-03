@@ -125,7 +125,7 @@ return {
 			-- 		return vim.uv.cwd()
 			-- 	end,
 			-- },
-			-- pyright = {},
+			pyright = {},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
@@ -157,8 +157,8 @@ return {
 			"stylua",
 			-- "prettier",
 			-- "eslint_d",
-			-- "markdownlint",
-			-- "black",
+			"markdownlint",
+			"black",
 			"clang-format",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
