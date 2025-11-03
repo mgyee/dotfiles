@@ -5,12 +5,9 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"neovim/nvim-lspconfig",
-		{
-			"L3MON4D3/LuaSnip",
-			build = "make install_jsregexp",
-		},
 		"saadparwaiz1/cmp_luasnip",
 		"onsails/lspkind.nvim",
+		"L3MON4D3/LuaSnip",
 	},
 	config = function()
 		local cmp = require("cmp")

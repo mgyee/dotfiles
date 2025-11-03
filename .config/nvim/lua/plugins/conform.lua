@@ -32,6 +32,7 @@ return {
 			go = { "gofmt", "goimports" },
 			verilog = { "verible" },
 			c = { "clang-format" },
+			cpp = { "clang-format" },
 		},
 	},
 }

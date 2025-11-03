@@ -101,6 +101,7 @@ return {
 
 		local servers = {
 			clangd = {},
+			solang = {},
 			-- gopls = {
 			-- 	settings = {
 			-- 		gopls = {

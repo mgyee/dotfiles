@@ -19,3 +19,4 @@ case `uname` in
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   ;;
 esac
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
