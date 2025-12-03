@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 ln -sf ~/dotfiles/.zshrc ~/
 ln -sf ~/dotfiles/.zshenv ~/
