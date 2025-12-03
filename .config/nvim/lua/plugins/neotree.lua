@@ -7,6 +7,17 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
+		require("neo-tree").setup({
+			filesystem = {
+				filtered_items = {
+					hide_dotfiles = false,
+					hide_gitignored = false,
+				},
+			},
+			window = {
+				width = 25,
+			},
+		})
 		local map = vim.keymap.set
 		map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Neotree Toggle" })
 		map("n", "<leader>r", "<cmd>Neotree focus<CR>", { desc = "Neotree Focus" })
