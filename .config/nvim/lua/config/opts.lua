@@ -8,6 +8,13 @@ vim.schedule(function()
 	opt.clipboard = "unnamedplus"
 end)
 
+vim.deprecate = function() end
+
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = true,
+})
+
 opt.syntax = "on"
 opt.autoindent = true
 opt.cursorline = true
@@ -20,14 +27,12 @@ opt.softtabstop = 2
 opt.smartindent = true
 opt.autoindent = true
 
--- vim.opt.encoding = "UTF-8"
 opt.ruler = true
 
 opt.mouse = "a"
 
 -- vim.opt.title = true
 
-opt.hidden = true -- When on a buffer becomes hidden when it is |abandon|ed
 opt.ttimeoutlen = 0 -- The time in milliseconds that is waited for a key code or mapped key sequence to complete.
 opt.wildmenu = true -- When 'wildmenu' is on, command-line completion operates in an enhanced mode.
 opt.showcmd = true -- Show (partial) command in the last line of the screen. Set this option off if your terminal is slow.

@@ -18,6 +18,8 @@ map("c", "<C-k>", "<C-p>")
 
 map("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })
 
+map("v", "<leader>p", '"_dP')
+
 -- Window Navigation
 -- map("n", "<C-h>", "<C-w>h")
 -- map("n", "<C-l>", "<C-w>l")

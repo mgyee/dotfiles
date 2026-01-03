@@ -95,6 +95,12 @@ return {
 			"<cmd>lua vim.diagnostic.goto_next()<CR>",
 			{ noremap = true, silent = true }
 		)
+		vim.api.nvim_set_keymap(
+			"n",
+			"<leader>dl",
+			"<cmd>lua vim.diagnostic.setloclist()<CR>",
+			{ noremap = true, silent = true, desc = "Set Location List" }
+		)
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
